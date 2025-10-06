@@ -2,8 +2,8 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: ["main"]  # build every time you push to main
-  workflow_dispatch:     # allow manual trigger
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true   # fetch Hugo themes (PaperMod is a submodule)
+          submodules: true
           fetch-depth: 0
 
       - name: Setup Hugo
@@ -43,9 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
