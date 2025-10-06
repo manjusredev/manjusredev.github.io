@@ -13,6 +13,11 @@ theme = "PaperMod"
   ShowReadingTime = true
   ShowCodeCopyButtons = true
 
+[params.social]
+  github = "https://github.com/manjusredev"
+  linkedin = "https://www.linkedin.com/in/manjunathkm"
+
+
 [menu]
   [[menu.main]]
     identifier = "home"
@@ -37,4 +42,7 @@ theme = "PaperMod"
     name = "Projects"
     url = "https://github.com/manjusredev"
     weight = 4
+
+[permalinks]
+  posts = "/posts/:slug/"
 
